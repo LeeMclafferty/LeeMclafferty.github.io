@@ -1,0 +1,53 @@
+
+.github-icon {
+    max-width: 5%;
+}
+
+.contact-btn {
+    text-align: center;
+    background-color: #D64045;
+    color: #FCF7F8;
+}
+
+.background-image-bubbles {
+    display: inline-block;
+    background-image: url(../Images/sectionGradient.png);
+    background-size: cover;
+}
+
+.view-height-85 {
+    display: inline-block;
+    height: 85vh!important;
+}
+
+.reading {
+    display: block;
+    font-size: large; 
+    line-height:2.2em; 
+    color: #1f1f1f;
+    font-weight: 400;
+    max-width: 80%;
+  }
+
+  .card-color-white {
+    background-color: #fbf7ff!important;
+}
+
+.background-image-portal{
+    display: inline-block;
+    background-image: url(../Images/ronPortal.png);
+    background-size: cover;
+  }
+
+  .project-vid {
+    height: 40vh!important;
+    width: 80vh!important;
+  }
+
+  .footer-icon {
+    max-width: 10%;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
