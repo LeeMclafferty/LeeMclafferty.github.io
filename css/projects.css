@@ -1,4 +1,9 @@
 
+
+body {
+  background-color: #1f2123;
+}
+
 .github-icon {
     max-width: 5%;
 }
@@ -24,13 +29,16 @@
     display: block;
     font-size: large; 
     line-height:2.2em; 
-    color: #1f1f1f;
     font-weight: 400;
     max-width: 80%;
   }
 
-  .card-color-white {
-    background-color: #fbf7ff!important;
+.card-color {
+    background-color: #2a2d30!important;
+}
+
+.nav-color {
+  background-color: #2a2d30!important;
 }
 
 .background-image-portal{
@@ -45,9 +53,15 @@
   }
 
   .footer-icon {
-    max-width: 10%;
+    max-width: 8%;
   }
 
   a:link {
     text-decoration: none;
   }
+
+.collapse-color {
+  border-color: #D64045!important;
+  width: 30px!important;
+  height: 30px;
+}

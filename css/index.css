@@ -15,6 +15,10 @@
     background-size: cover;
 }
 
+body {
+  background-color: #1f2123;
+}
+
 .view-height-85 {
     display: inline-block;
     height: 85vh!important;
@@ -31,32 +35,41 @@
 }
 
 .footer-icon {
-  max-width: 10%;
+  max-width: 8%;
 }
 
 a:link {
     text-decoration: none;
 }
 
-.card-color-white {
-    background-color: #fbf7ff!important;
+.reading {
+  display: block;
+  font-size: large; 
+  line-height:2.2em; 
+  font-weight: 400;
+  max-width: 80%;
 }
 
-.reading {
-    display: block;
-    font-size: large; 
-    line-height:2.2em; 
-    color: #1f1f1f;
-    font-weight: 400;
-    max-width: 80%;
-  }
-  
-  .project-thumbnail {
-    max-width: 70%;
-  }
+.project-thumbnail {
+  max-width: 70%;
+}
 
-  .resume-frame {
-    max-width: 100%;
-    height: auto;
-  }
+.resume-frame {
+  max-width: 100%;
+  height: auto;
+}
+
+.card-color {
+  background-color: #2a2d30!important;
+}
+
+.nav-color {
+  background-color: #2a2d30!important;
+}
+
+.collapse-color {
+  border-color: #D64045!important;
+  width: 30px!important;
+  height: 30px;
+}
 
