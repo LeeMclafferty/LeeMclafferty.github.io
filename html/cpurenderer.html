@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lee Mclafferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/projects.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/fdb30e1950.js"
+      crossorigin="anonymous"
+></script>
+  </head>
+    
+<body> v v
+
+<!-- Sticky Nav Bar-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top card-color">
+    <div class="container-fluid">
+        <h5 class="navbar-brand text-light">LEE MCLAFFERTY</h5>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <img src="../Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <nav class="d-flex ms-auto ">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link text-light" href="../index.html#home" >Home</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="../index.html#projects" >Projects</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="../index.html#resume" >Resume</a></li>
+                  <li class="nav-item"><a class="nav-link text-light" href="../index.html#about" >About Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+  </nav>
+
+    <!-- Title Page -->
+<header class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card" id="home">
+  <div class="background-image-bubbles card-img m-0">
+      <div class="pt-5 mt-5">
+        <!-- Title and Contact-->
+          <div class="py-4 ms-5 ps-3">
+              <h1 class="display-4 fw-bold pb-1">CPU Renderer</h1>
+              <hr>
+              <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
+                Contact Me
+            </button>    
+        </div>
+
+        <div class="col mt-3 mb-3">
+            <!-- Project Video (Used Gif for this one)-->
+            <div class="embed-responsive embed-responsive-16by9">
+              <div class="w-25 mx-auto row project-vid">
+                <img src="../Images/cpuRenderer.gif" alt="End game portal" class="rounded-2 mx-auto my-2"> 
+              </div>
+          </div>
+        
+            <!-- Github Link-->
+            <div>
+                <a href="https://github.com/LeeMclafferty/CPURenderer">
+                    <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
+                </a>
+          </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+  <!-- About Project Section-->
+  <div>
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5"> Welcome to my portfolio project all about 3D graphics. I'm a student software developer, and alongside my schoolwork, I've been getting into the world of 3D graphics. I started off by digging into this book called "Computer Graphics from Scratch." No graphics API here, just raw graphics. I've always been fascinated by computer graphics, so I thought, "Hey, let's learn the nitty-gritty before diving into the fancy graphics APIs."</p>
+    </div>
+    
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">My project uses a bit of SDL for window creation, rendering, and displaying an SDL_Texture. Outside of that I am manipulating everything on an array that represents the pixel size of the window. With this setup, I crafted some functions to rasterize pixels, draw lines, and triangles. Right now, the renderer can read .OBJ files, that are given a path in the code. My goal is to add more features, like moving objects in the viewport, importing OBJs with a simple GUI, and of course, refactoring and optimizing.</p>
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+      <!-- Code Snip--> 
+      <pre class="mb-3 mt-3 mx-auto">
+void AGridTile::OnConstruction(const FTransform& Transform)
+{
+  void render(void)
+  {
+    draw_grid(0xFF333333);
+    
+    // Loop over projected triangle and render them
+    int num_triangles = array_length(triangles_to_render);
+      for (int i = 0; i < num_triangles; i++)
+      {
+      triangle_t triangle = triangles_to_render[i];
+  
+      if(render_vertices) display_vertices(triangle);
+      if(render_faces) display_faces(triangle);
+      if(render_wireframe) display_wireframe(triangle);
+    }
+  
+    // Clear array of triangles every frame
+    array_free(triangles_to_render);
+    render_color_buffer();
+    clear_color_buffer(0xFFD3D3D3);
+    SDL_RenderPresent(renderer);
+  }
+}
+      </pre>
+  </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">This project has been an amazing introduction to computer graphics and advanced programming concepts. After this, I'm jumping headfirst into OpenGL and letting the API do some heavy lifting for me.
+      </p>
+    </div>
+  </div>
+
+  <!-- Social link footer-->
+  <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
+    <div class="text-center m-5 p-5">
+        <div>
+            <a href="https://www.linkedin.com/in/leemclafferty/">
+                <i class="fa-brands fa-linkedin-in img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://lee-mclafferty.itch.io">
+                <i class="fa-brands fa-itch-io img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://www.discord.com/users/180187926246850560">
+                <i class="fa-brands fa-discord img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://github.com/LeeMclafferty">
+                <i class="fa-brands fa-github img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+        </div>  
+    </div>
+</footer>
+      
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
