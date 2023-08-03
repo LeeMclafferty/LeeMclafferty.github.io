@@ -42,7 +42,7 @@
       <div class="pt-5 mt-5">
         <!-- Title and Contact-->
           <div class="py-4 ms-5 ps-3">
-              <h1 class="display-4 fw-bold pb-1">CPU Renderer</h1>
+              <h1 class="display-4 fw-bold pb-1">Software Renderer</h1>
               <hr>
               <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
                 Contact Me
@@ -59,7 +59,7 @@
         
             <!-- Github Link-->
             <div>
-                <a href="https://github.com/LeeMclafferty/CPURenderer">
+                <a href="https://github.com/LeeMclafferty/SoftwareRenderer">
                     <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
                 </a>
           </div>
@@ -71,48 +71,27 @@
   <!-- About Project Section-->
   <div>
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5"> Welcome to my portfolio project all about 3D graphics. I'm a student software developer, and alongside my schoolwork, I've been getting into the world of 3D graphics. I started off by digging into this book called "Computer Graphics from Scratch." No graphics API here, just raw graphics. I've always been fascinated by computer graphics, so I thought, "Hey, let's learn the nitty-gritty before diving into the fancy graphics APIs."</p>
+      <p class="reading mx-auto my-5"> This software renderer is my current passion project, which I'm working on alongside my school coursework. Its primary objective is to provide me with a comprehensive introduction to computer graphics and linear algebra by manually implementing essential components wherever feasible.</p>
     </div>
     
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5">My project uses a bit of SDL for window creation, rendering, and displaying an SDL_Texture. Outside of that I am manipulating everything on an array that represents the pixel size of the window. With this setup, I crafted some functions to rasterize pixels, draw lines, and triangles. Right now, the renderer can read .OBJ files, that are given a path in the code. My goal is to add more features, like moving objects in the viewport, importing OBJs with a simple GUI, and of course, refactoring and optimizing.</p>
+      <p class="reading mx-auto my-5">To accomplish this, I am leveraging the SDL library for window creation, the final display through the SDL renderer, and handling user input. However, everything else is being built from scratch, with a strong focus on adhering to modern C++ best practices.</p>
     </div>
-
-    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
-      <!-- Code Snip--> 
-      <pre class="mb-3 mt-3 mx-auto">
-void render(void)
-{
-  void render(void)
-  {
-    draw_grid(0xFF333333);
-    
-    // Loop over projected triangle and render them
-    int num_triangles = array_length(triangles_to_render);
-      for (int i = 0; i < num_triangles; i++)
-      {
-      triangle_t triangle = triangles_to_render[i];
-  
-      if(render_vertices) display_vertices(triangle);
-      if(render_faces) display_faces(triangle);
-      if(render_wireframe) display_wireframe(triangle);
-    }
-  
-    // Clear array of triangles every frame
-    array_free(triangles_to_render);
-    render_color_buffer();
-    clear_color_buffer(0xFFD3D3D3);
-    SDL_RenderPresent(renderer);
-  }
-}
-      </pre>
-  </div>
 
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5">This project has been an amazing introduction to computer graphics and advanced programming concepts. After this, I'm jumping headfirst into OpenGL and letting the API do some heavy lifting for me.
-      </p>
+      <p class="reading mx-auto my-5">At the core of my renderer is a single "engine" instance, serving as the central entry point for the program. This engine efficiently manages crucial elements like the renderer itself, the window, the scene, and other important core classes.</p>
     </div>
   </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+    <p class="reading mx-auto my-5">Currently, the program supports various features, including reading .obj files, mesh transformations, multiple display methods, and backface culling. My next steps involve implementing face rendering order with a Z-Buffer, adding textures, and incorporating lighting techniques to enhance realism.</p>
+  </div>
+</div>
+
+<div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+  <p class="reading mx-auto my-5">By the end of this project, my goal is to have a profound understanding of computer graphics principles, preparing me to delve into OpenGL, which can abstract much of the manual implementation for me. With this solid foundation, I look forward to exploring even more complex and exciting graphics projects in the future.</p>
+</div>
+</div>
 
   <!-- Social link footer-->
   <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
