@@ -1,7 +1,15 @@
-
+/*
+  Updated Color Palette:
+    LightPurple:   #b670eb
+    DarkPurple:    #7a47d7
+    LightGrey:     #f4f4f4
+    DarkGrey:      #a9a9a9
+    AccentColor:   #D64045
+*/
 
 body {
-  background-color: #1f2123;
+  background-color: #f4f4f4; /* LightGrey */
+  color: #333; /* Dark text for readability */
 }
 
 .github-icon {
@@ -10,8 +18,8 @@ body {
 
 .contact-btn {
     text-align: center;
-    background-color: #D64045;
-    color: #FCF7F8;
+    background-color: #D64045; /* AccentColor */
+    color: white; /* Adjusted for contrast */
 }
 
 .background-image-bubbles {
@@ -31,37 +39,53 @@ body {
     line-height:2.2em; 
     font-weight: 400;
     max-width: 80%;
-  }
-
-.card-color {
-    background-color: #2a2d30!important;
+    color: #333; /* Ensuring readability */
 }
 
+.card-color {
+    background-color: #fff!important; /* White, for card background */
+    border: 1px solid #a9a9a9; /* DarkGrey, for border */
+}
+
+
 .nav-color {
-  background-color: #2a2d30!important;
+  background-color: #f4f4f4!important; /* LightGrey */
+}
+
+.navbar .nav-link.nav-link-custom {
+  color: #D64045;
+}
+
+.nav-link-custom:hover {
+  color: #b670eb; 
 }
 
 .background-image-portal{
     display: inline-block;
     background-image: url(../Images/ronPortal.png);
     background-size: cover;
-  }
+}
 
-  .project-vid {
+.project-vid {
     height: 40vh!important;
     width: 80vh!important;
-  }
+}
 
-  .footer-icon {
+.footer-icon {
     max-width: 8%;
-  }
+}
 
-  a:link {
+.content a:link {
     text-decoration: none;
-  }
+    color: #7a47d7; /* DarkPurple, for links */
+}
+
+a:visited {
+    color: #b670eb; /* LightPurple */
+}
 
 .collapse-color {
-  border-color: #D64045!important;
-  width: 30px!important;
-  height: 30px;
+    border-color: #D64045!important; /* AccentColor */
+    width: 30px!important;
+    height: 30px;
 }

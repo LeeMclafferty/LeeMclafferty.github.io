@@ -16,19 +16,19 @@
 <body>
 
     <!-- Sticky Nav Bar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top card-color">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" style="background-color: black;">
         <div class="container-fluid">
-            <h5 class="navbar-brand text-light">LEE MCLAFFERTY</h5>
+            <h5 class="navbar-brand" style="color: #D64045;">LEE MCLAFFERTY</h5>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <img src="./Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <nav class="d-flex ms-auto ">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item"><a class="nav-link text-light" href="./index.html#home" >Home</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="./index.html#projects" >Projects</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="./index.html#resume" >Resume</a></li>
-                      <li class="nav-item"><a class="nav-link text-light" href="./index.html#about" >About Me</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="./index.html#home" >Home</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="./index.html#projects" >Projects</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="./index.html#resume" >Resume</a></li>
+                        <li class="nav-item"><a class="nav-link nav-link-custom" href="./index.html#about" >About Me</a></li>                    
                     </ul>
                 </nav>
             </div>
@@ -66,59 +66,67 @@
     </header>
 
 <!-- Projects Section -->
-<div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="projects">
-    <div class="text-center m-3">
-        <div>
-            <h4 class="display-4 fw-bold pb-1 p-3 mt-5 mb-0">Click a Project For More Info</h4>
-            <!-- Survival Prototype -->
-            <div class="col-3 mb-5 d-inline-block text-center">
-                <a href="./html/survivalprototype.html">
-                    <img src="./Images/survivalThumbnail.png" alt="Survival project thumbnail" class="project-thumbnail mb-3 mt-5 border border-dark rounded">
-                </a>
-                <div>
-                    <img src="https://img.shields.io/badge/ProjectType-Prototype-blueviolet" alt="Project Type Icon" />
-                    <p> Completion Date: 1/17/2022</p>
-                </div>
+<div class="projects-section" id="projects">
+    <h4 class="section-title">Click a Thumbnail For More Info</h4>
+
+    <!-- Grid Container -->
+    <div class="projects-grid">
+        <!-- Survival Prototype Card -->
+        <div class="project-card">
+            <a href="./html/survivalprototype.html">
+                <img src="./Images/survivalThumbnail.png" alt="Survival project thumbnail" class="project-thumbnail">
+            </a>
+            <div class="project-info">
+                <img src="https://img.shields.io/badge/ProjectType-Prototype-blueviolet" alt="Project Type Icon" />
+                <p>Completion Date: 1/17/2022</p>
+                <p>A Prototype that was created to learn more about net code. Originally I wanted to make a complete game, but I was too new at them time. </p>
             </div>
-            <!-- Ron Game -->
-            <div class="col-3 mb-5 d-inline-block text-center">
-                <a href="./html/ron.html">
-                    <img src="./Images/ronThumbnail.png" alt="Ron project thumbnail" class="project-thumbnail mb-3 mt-5 border border-dark rounded">
-                </a>
-                <div>
-                    <img src="https://img.shields.io/badge/ProjectType-Full Game-blueviolet" alt="Project Type Icon" />
-                    <p> Completion Date: 8/22/2022</p>
-                </div>
+        </div>
+
+        <!-- Ron Game Card -->
+        <div class="project-card">
+            <a href="./html/ron.html">
+                <img src="./Images/ronThumbnail.png" alt="Ron project thumbnail" class="project-thumbnail">
+            </a>
+            <div class="project-info">
+                <img src="https://img.shields.io/badge/ProjectType-Full Game-blueviolet" alt="Project Type Icon" />
+                <p>Completion Date: 8/22/2022</p>
+                <p>'Hi I'm Ron' is a short 'walking sim' game using UE5 and c++. This was my first completed project in the Engine and was used to learn a games architecure.</p>
             </div>
-            <!-- Think Ahead -->
-            <div class="col-3 mb-5 d-inline-block text-center">
-                <a href="./html/thinkahead.html">
-                    <img src="./Images/ThinkAheadThumbnail.png" alt="Think Ahead Project thumbnail" class="project-thumbnail mb-3 mt-5 border border-dark rounded">
-                </a>
-                <div>
-                    <img src="https://img.shields.io/badge/ProjectType-Full Game-blueviolet" alt="Project Type Icon" />
-                    <p> Completion Date: 4/26/2023</p>
-                </div>
+        </div>
+
+        <!-- Think Ahead Card -->
+        <div class="project-card">
+            <a href="./html/thinkahead.html">
+                <img src="./Images/ThinkAheadThumbnail.png" alt="Think Ahead Project thumbnail" class="project-thumbnail">
+            </a>
+            <div class="project-info">
+                <img src="https://img.shields.io/badge/ProjectType-Full Game-blueviolet" alt="Project Type Icon" />
+                <p>Completion Date: 4/26/2023</p>
+                <p>Think Ahead is a complete puzzle game made in Unreal Engine 5, using primarily C++. The game was used to practice spatial reasoning skills and have learn how to use procedural mesh in UE.</p>
             </div>
-            <!-- Software Renderer -->
-            <div class="col-3 mb-5 d-inline-block text-center">
-                <a href="./html/cpurenderer.html">
-                    <img src="./Images/cpuRendererThumbnail.png" alt="Software Renderer Project thumbnail" class="project-thumbnail mb-3 mt-5 border border-dark rounded">
-                </a>
-                <div>
-                    <img src="https://img.shields.io/badge/ProjectType-Computer Graphics-blueviolet" alt="Project Type Icon" />
-                    <p> Completion Date: In Progress</p>
-                </div>
+        </div>
+
+        <!-- Software Renderer Card -->
+        <div class="project-card">
+            <a href="./html/cpurenderer.html">
+                <img src="./Images/cpuRendererThumbnail.png" alt="Software Renderer Project thumbnail" class="project-thumbnail">
+            </a>
+            <div class="project-info">
+                <img src="https://img.shields.io/badge/ProjectType-Computer Graphics-blueviolet" alt="Project Type Icon" />
+                <p>Completion Date: In Progress</p>
+                <p>Exploring computer graphics fundementals and creating a render without an API.</p>
             </div>
         </div>
     </div>
 </div>
+
   
 
     <!-- About Me section -->
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="about">
         <div class="text-center m-3">
-            <h4 class="display-5 fw-bold pb-1 p-3 m-5">About Me</h4>
+            <h4 class="section-title">About Me</h4>
             <p class="reading mx-auto">Hi! my name is Lee.</p>
 
             <p class="reading mx-auto">
@@ -151,7 +159,7 @@
     <!-- Resume Section -->
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
         <div class="text-center m-3">
-            <h4 class="display-5 fw-bold pb-1 p-3 m-5" >Resume</h4>
+            <h4 class="section-title" >Resume</h4>
             <div class="resume-frame">
                 <img src = "./Images/LM CV1024_1.png" alt="Resume Page One" class="project-thumbnail mb-0 mt-5 border border-dark rounded w-50">
                 <img src = "./Images/LM CV1024_2.png" alt="Resume Page One" class="project-thumbnail mb-3 mt-0 border border-dark rounded w-50">

@@ -1,10 +1,10 @@
-
 /*
-  Color Pallette:
-    LightPurple   #b670eb
-    DarkPurple    #7a47d7
-    Red           #fd3359
-    White         #FCF7F8
+  Updated Color Palette:
+    LightPurple:   #b670eb
+    DarkPurple:    #7a47d7
+    LightGrey:     #f4f4f4
+    DarkGrey:      #a9a9a9
+    AccentColor:   #D64045
 */
 
 @import "../node_modules/bootstrap/scss/utilities";
@@ -16,7 +16,8 @@
 }
 
 body {
-  background-color: #1f2123;
+  background-color: #f4f4f4; /* LightGrey */
+  color: #333; /* Dark text for better readability */
 }
 
 .view-height-85 {
@@ -26,8 +27,8 @@ body {
 
 .contact-btn {
     text-align: center;
-    background-color: #D64045;
-    color: #FCF7F8;
+    background-color: #D64045; /* AccentColor */
+    color: white;
 }
 
 .social-icon {
@@ -38,16 +39,22 @@ body {
   max-width: 8%;
 }
 
-a:link {
+.content a:link {
     text-decoration: none;
+    color: #D64045;
+}
+
+a:visited {
+    color: #b670eb; /* LightPurple */
 }
 
 .reading {
   display: block;
   font-size: large; 
-  line-height:2.2em; 
+  line-height: 2.2em; 
   font-weight: 400;
   max-width: 80%;
+  color: #333;
 }
 
 .project-thumbnail {
@@ -60,16 +67,68 @@ a:link {
 }
 
 .card-color {
-  background-color: #2a2d30!important;
+  background-color: #fff!important; /* White card background */
+  border: 1px solid #a9a9a9; /* DarkGrey border */
 }
 
-.nav-color {
-  background-color: #2a2d30!important;
+.navbar .nav-link.nav-link-custom {
+  color: #D64045;
+  font-weight: bold;
 }
+
+.nav-link-custom:hover {
+  color: #b670eb; 
+}
+
 
 .collapse-color {
-  border-color: #D64045!important;
+  border-color: #7a47d7!important; /* DarkPurple */
   width: 30px!important;
   height: 30px;
 }
 
+/* Styles for project section */
+.projects-section {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: #333;
+}
+
+.section-title {
+  font-weight: bold;
+  padding: 1rem 0;
+  margin-top: 5rem;
+  font-size: 3rem;
+  color: #a9a9a9;
+  font-weight: bold;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #a9a9a9; /* DarkGrey border */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+
+.project-thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  border: 1px solid #a9a9a9; /* DarkGrey */
+}
+
+.project-info {
+  margin-top: 1rem;
+  color: #333; /* Dark text for readability */
+}
