@@ -36,17 +36,27 @@ body {
 .reading {
     display: block;
     font-size: large; 
-    line-height:2.2em; 
+    line-height: 2.2em; 
     font-weight: 400;
-    max-width: 80%;
-    color: #333; /* Ensuring readability */
-}
+    color: #333;
+    max-width: 60%;
+    text-align: left;
+  }
+
+  .reading-cat {
+    display: block;
+    font-size: large; 
+    line-height: 2.2em; 
+    color: #333;
+    max-width: 60%;
+    text-align: left;
+    font-weight: bold;
+  }
 
 .card-color {
     background-color: #fff!important; /* White, for card background */
     border: 1px solid #a9a9a9; /* DarkGrey, for border */
 }
-
 
 .nav-color {
   background-color: #f4f4f4!important; /* LightGrey */
@@ -54,6 +64,7 @@ body {
 
 .navbar .nav-link.nav-link-custom {
   color: #D64045;
+  font-weight: bold;
 }
 
 .nav-link-custom:hover {

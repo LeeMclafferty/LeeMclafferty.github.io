@@ -53,8 +53,9 @@ a:visited {
   font-size: large; 
   line-height: 2.2em; 
   font-weight: 400;
-  max-width: 80%;
   color: #333;
+  max-width: 50%;
+  text-align: left;
 }
 
 .project-thumbnail {

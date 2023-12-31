@@ -17,7 +17,7 @@
 <body>
 
 <!-- Sticky Nav Bar-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top card-color">
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
   <div class="container-fluid">
       <h5 class="navbar-brand" style="color: #D64045;">LEE MCLAFFERTY</h5>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,7 @@
             <!-- Project Video-->
             <div class="embed-responsive embed-responsive-16by9">
               <div class="w-25 mx-auto row project-vid">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/CEigV79fkMk" allowfullscreen="true"></iframe>
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/OfVE7S-fSn8" allowfullscreen="true"></iframe>
               </div>
           </div>
         
@@ -70,28 +70,28 @@
 
   <!-- About Project Section-->
   <div>
-    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5"> Think Ahead is an engaging 3D puzzle game project that I was able to see through to completion. This project showcases my programming expertise, featuring clean code and well-abstracted functionality. Designed to test and enhance players' spatial reasoning skills, Think Ahead challenges players to strategically plan their moves in advance. The objective of the game is to guide a pig to its mud puddle by carefully visualizing each move before executing them all simultaneously. As a testament to my continued growth and development as a programmer, Think Ahead demonstrates my ability to create an immersive and thought-provoking gaming experience.</p>
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Why did I do this project? <p>
+      <p class="reading mx-auto mb-5">The goal behind this wasn't to make a commercially successful game or even to release it. The aim was to take a project from nothing to completion, practice planning and designing my code base/project, and finally, to gamify spatial reasoning skills.<p>        
     </div>
 
     
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5">ThinkAhead holds a special place in my programming journey as it marks a significant shift in my approach to game development. For this project, I embraced a more structured and methodical process, planning the entire game loop, scope, time frame, and art direction before diving into the actual development. While ThinkAhead is a smaller-scale game, this comprehensive planning proved invaluable, allowing me to make well-informed, iterative changes based on player feedback and personal gameplay experiences. To provide insight into my planning process and demonstrate my growth as a game developer, I have documented every stage of the project in a series of Milanote boards. This experience has not only enhanced my technical skills but also reinforced the importance of strategic planning and adaptability in crafting a captivating and enjoyable gaming experience.</p>
-  
+      <p class="reading-cat mx-auto mt-5">Spatial Reasoning</p>
+      <p class="reading mx-auto mb-5">Spatial reasoning is the ability to visualize transformations of an object in 3D space. This ability is crucial in computer graphics, so this game is a way to flex those muscles. In Think Ahead, the player must select all their moves upfront, forcing them to visualize the pig’s movement before executing. A graphics programmer’s ability to use spatial reasoning is valuable because it lets them write code that translates to a visual thing while picturing what they are doing in their head. It provides a visual method of debugging, which is a powerful tool alongside traditional code debuggers. Being able to see a bug displayed and backtrack it in your mind can save a lot of time. This skill comes with experience, but practicing never hurts. </p>
     </div>
 
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
-      <iframe src="https://app.milanote.com/1Pn4ni10NKGX4E?p=BcTTq67LfiU" width="1000" height="300" frameborder="0" class="rounded-bottom-3 mx-auto mb-3 mt-3"></iframe>
-      <iframe src="https://app.milanote.com/1Pn4G810NKGX51?p=XgfkU4SQ04A" width="1000" height="300" frameborder="0" class="rounded-bottom-3 mx-auto mb-3"></iframe>
+      <iframe src="https://app.milanote.com/1Pn4G810NKGX51?p=XgfkU4SQ04A" width="70%" height="700" frameborder="0" class="rounded-bottom-3 mx-auto m-3"></iframe>
     </div>
 
     
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5">During the development of this game, I placed a strong emphasis on scalability, ensuring that the codebase was designed with future growth and adaptability in mind. One key strategy I employed to achieve this was the implementation of a procedurally generated grid system for the playing field. By defining the vertices of the planes and generating them programmatically, I was able to swiftly test various board sizes to identify the optimal dimensions for gameplay. Furthermore, this approach grants me the flexibility to experiment with different sizes and shapes in the future, should I choose to expand the game's content. 
-      </p>
+      <p class="reading-cat mx-auto mt-5">Abstraction </p>
+      <p class="reading mx-auto mb-5">Think Ahead, being one of my earlier projects, lacks a clear code architecture or pattern, but I do follow rules that I wanted to practice. Starting my journey into graphics APIs, I noticed abstraction is a huge and important part of programming. The code base for Think Ahead focuses on abstracting out complicated functionality into reusable classes and functions, which also inherently satisfies the DRY principles. An example is the Grid generation system. The grid can be generated in the UE editor by simply setting rows, columns, and selecting the “generate” button. This is an abstraction of what I’ve done behind the scenes, where in reality I’m using procedural meshes to generate each tile, find the next vertices, and do it again to create a resizable dynamic grid. </p>      
     </div>
     
-    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 bg-image card card-color">  
       <pre class="mb-3 mt-3 mx-auto">
         void AGridTile::OnConstruction(const FTransform& Transform)
         {
@@ -113,9 +113,15 @@
     </div>
 
     <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
-      <p class="reading mx-auto my-5">At the top of this page, you'll find a video where I talk more about my thought process during development.  Throughout this development cycle, I have learned several valuable lessons, including designing code that is easy to read, abstracting functionality where appropriate, and leveraging the call stack for effective debugging. Interestingly, most of the bugs encountered during the playtests were not present in the editor but only appeared in the packaged game. This experience has not only contributed to my growth as a developer but has also helped me refine my problem-solving skills. I highly recommend taking a look at the code to gain insights into my thought process and development approach.</p>
+      <p class="reading-cat mx-auto mt-5">Mesh Generation</p>
+      <p class="reading mx-auto mb-5">One of the things I was very set on using in this project was procedural meshes. I wanted to learn how to draw vertices, connect them with tris, and then fill those tris with a face. Starting with a plane seemed like the best way to learn how these parts connect. Doing it this way introduced me to concepts like normals, backface culling, and handedness of a 3D system. In the tile OnConstruction, I broke down what can be seen as a ‘simple plane’ into all of its more complicated parts. </p>
     </div>
+  </div>
 
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+    <p class="reading-cat mx-auto mt-5">What I Learned </p>
+    <p class="reading mx-auto mb-5">Think Ahead taught me the importance of abstracted code separated into units of responsibility. I saw the value of having smaller, abstracted code that I could reuse, not just because it's easier to write but also because it's easier to revisit. In my future projects, I aim to implement more of this organization and focus on decoupling code further to minimize dependencies as much as possible. </p>    
+  </div>
   </div>
 
   <!-- Social link footer-->
