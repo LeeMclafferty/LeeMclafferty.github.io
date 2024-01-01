@@ -33,6 +33,13 @@ body {
     height: 85vh!important;
 }
 
+.header-image {
+  max-width: 50%; 
+  height: 75%; 
+  display: block;
+  margin: 0 auto;
+}
+
 .reading {
     display: block;
     font-size: large; 

@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lee Mclafferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/projects.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/fdb30e1950.js"
+      crossorigin="anonymous"
+></script>
+  </head>
+    
+<body>
+
+<!-- Sticky Nav Bar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+      <h5 class="navbar-brand" style="color: #D64045;">LEE MCLAFFERTY</h5>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="d-flex ms-auto ">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#home" >Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#projects" >Projects</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#resume" >Resume</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#about" >About Me</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</nav>
+
+    <!-- Title Page -->
+<header class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card" id="home">
+  <div class="background-image-bubbles card-img m-0">
+      <div class="pt-5 mt-5">
+        <!-- Title and Contact-->
+          <div class="py-4 ms-5 ps-3">
+              <h1 class="display-4 fw-bold pb-1">Task Tracker Mobile App</h1>
+              <hr>
+              <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
+                Contact Me
+            </button>    
+        </div>
+
+        <div class="col mt-3 mb-3">
+            <!-- Project Video-->
+              <div class="mx-auto row">
+                <img src="../Images/GooglePlayBanner.png" alt="Page banner for task tracker" class="rounded-2 mx-auto my-2 header-image"> 
+              </div>
+        
+            <!-- Github Link-->
+            <div>
+                <a href="https://github.com/LeeMclafferty/TaskTracker">
+                    <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
+                </a>
+          </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+  <!-- About Project Section-->
+  <div>
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Why did I do this project? <p>
+        <p class="reading mx-auto mb-5">
+            The Task Tracker application originally started out as an open-ended school project. I was able to pick the application I made and just had to work with a DB and meet some other requirements. However, I decided to take the application to being a fully functional application published on the google play store. This project also allowed me enough creative freedom to learn some decoupled programming patterns. In the project I used a combination of dependency injection, clean architecture, and MVVM.
+        </p>            
+    </div>
+
+    
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">.NET Maui</p>
+      <p class="reading mx-auto mb-5">
+        Using .NET and C# introduced me to another side of programming where having a package manager made life a lot easier than I am used to in C++. A package that I used for this project is .NET Maui, which seeks to replace XARMIN forms and allows developers to create a cross platform with a single code base and just some build file specifications. One of the key features of .NET Maui that I used to decouple the application was its native support for dependency injection. By defining Interfaces to inject in the Maui Project file, I was able to seamlessly abstract away entire projects of code.
+        </p>        
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Clean Architecture </p>
+      <p class="reading mx-auto mb-5">
+        Incorporating clean architecture into the application, separated into four distinct projects - Database, Use Cases, View Models, and Views - brings a host of significant benefits. This modular approach enhances maintainability, allowing for easier updates and modifications to individual components without impacting the overall system. Each isolated layer improves the testability of the application, enabling focused and efficient unit testing. Flexibility is another key advantage; changes in one module, such as the database or user interface, can be implemented with minimal effect on other parts of the application. This architecture also facilitates parallel development, as different teams can concurrently work on separate layers, thus accelerating the development process. Furthermore, the clear separation of concerns makes the application more intuitive and easier to navigate, particularly beneficial for new developers joining the project. Lastly, centralizing business logic in the Use Cases layer ensures consistent and reliable application behavior, adhering to defined business rules and logic.
+        </p>        
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+      <img src="../Images/CleanArchitechtureGraphic.png" alt="Clean Architecture Graphic" class="rounded-2 w-50 mx-auto my-2"> 
+   </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">MVVM</p>
+      <p class="reading mx-auto mb-5">
+        The Task Tracker Application implements the Model-View-View Model (MVVM) design pattern, leveraging the capabilities of the Community. Toolkit within the .NET Maui framework. This integration facilitates an efficient architecture, where the 'Use Cases' and 'Database' projects collectively serve as the Model. These components are responsible for directly managing and controlling data. In this architecture, .NET Maui's built-in dependency injection plays a pivotal role. It seamlessly connects the Model components with other parts of the application, ensuring a smooth flow of data and functionality.
+        </p>
+        <p class="reading mx-auto mb-5">
+        The View Model layer is embodied by the View Model classes within the Task Tracker Project. These classes are crucial in abstracting and handling the communication between the Model and the Views. This abstraction is vital for maintaining a clean separation of concerns, a core principle of the MVVM pattern. In the context of this application, the Views are represented by the app content pages. They are designed to interact with the View Model, which in turn, deals with the Model. This setup not only enhances maintainability and testability but also
+        </p>        
+    </div>
+  </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+    <img src="../Images/MVVMGraphic.png" alt="MVVM Graphic" class="rounded-2 w-50 mx-auto my-2"> 
+ </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+    <p class="reading-cat mx-auto mt-5">Unit Testing</p>
+    <p class="reading mx-auto mb-5">
+        The primary objective of this testing plan is to validate the functionality and reliability of all CRUD (Create, Read, Update, Delete) operations performed on the database. This encompasses ensuring that these operations provide accurate, consistent, and reliable data manipulation. The plan aims to cover various scenarios, including normal operations, edge cases, and error handling, to comprehensively assess the robustness of the database interactions.
+        </p>
+        
+        <p class="reading mx-auto mb-5">
+        The testing was conducted using the xUnit testing framework. To simulate the database environment without affecting the actual SQLite database, the project leverages an in-memory database. This approach facilitates testing in a controlled environment, allowing for the isolation of database operations. The in-memory database is designed to replicate the behavior of the actual database, enabling a thorough evaluation of CRUD functionalities. The tests will be executed to assess the correctness of the database operations, with particular attention to the consistency of the data returned and the system's response to various input conditions. The test results will provide insights into the performance and reliability of the database operations, forming the basis for any necessary refinements or optimizations.
+        </p>        
+  </div>
+  </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+    <p class="reading-cat mx-auto mt-5">What did I learn?</p>
+    <p class="reading mx-auto mb-5">
+        The primary objective of this testing plan is to validate the functionality and reliability of all CRUD (Create, Read, Update, Delete) operations performed on the database. This encompasses ensuring that these operations provide accurate, consistent, and reliable data manipulation. The plan aims to cover various scenarios, including normal operations, edge cases, and error handling, to comprehensively assess the robustness of the database interactions.
+        </p>
+        <p class="reading mx-auto mb-5">
+            I walked away from this project with a lot of practice on knowledge that was only theoretical to me previously. I was able to work closely with scalable programing patterns to create a sturdy code base, test my code with proper unit testing, and go through the process of publishing an app to the public. This app was meant to be a simple way to track to-do list without the bloat that comes with larger platforms. Overall I accomplished my goals.
+            </p>                  
+  </div>
+  </div>
+
+  <!-- Social link footer-->
+  <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
+    <div class="text-center m-5 p-5">
+        <div>
+            <a href="https://www.linkedin.com/in/leemclafferty/">
+                <i class="fa-brands fa-linkedin-in img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://lee-mclafferty.itch.io">
+                <i class="fa-brands fa-itch-io img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://www.discord.com/users/180187926246850560">
+                <i class="fa-brands fa-discord img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://github.com/LeeMclafferty">
+                <i class="fa-brands fa-github img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+        </div>  
+    </div>
+</footer>
+      
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
