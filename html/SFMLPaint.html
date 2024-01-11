@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lee Mclafferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/projects.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/fdb30e1950.js"
+      crossorigin="anonymous"
+></script>
+  </head>
+    
+<body>
+
+<!-- Sticky Nav Bar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+      <h5 class="navbar-brand" style="color: #D64045;">LEE MCLAFFERTY</h5>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="d-flex ms-auto ">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#home" >Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#projects" >Projects</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#resume" >Resume</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#about" >About Me</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</nav>
+
+    <!-- Title Page -->
+<header class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card" id="home">
+  <div class="background-image-bubbles card-img m-0">
+      <div class="pt-5 mt-5">
+        <!-- Title and Contact-->
+          <div class="py-4 ms-5 ps-3">
+              <h1 class="display-4 fw-bold pb-1">2D-Drawing Application</h1>
+              <hr>
+              <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
+                Contact Me
+            </button>    
+        </div>
+
+        <div class="col mt-3 mb-3">
+            <!-- Project Video-->
+              <div class="mx-auto row">
+                <img src="../Images/2D-DrawingApp/2D-DrawingGif.gif" alt="Page banner for task tracker" class="rounded-2 mx-auto my-2 header-image"> 
+              </div>
+        
+            <!-- Github Link-->
+            <div>
+                <a href="https://github.com/LeeMclafferty/Simple2D-DrawingApplication">
+                    <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
+                </a>
+          </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+  <!-- About Project Section-->
+  <div>
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Why did I do this project? <p>
+        <p class="reading mx-auto mb-5">
+            In this project, I embarked on an exploration of 2D graphics and user interfaces using C++. The process involved integrating external libraries, which enhanced my understanding of render loops, user input, and the nuances of source control branching. Working on this project, I delved deeper into practical aspects of C++ programming and gained valuable experience in working with complex, multi-component systems.
+        </p>            
+    </div>
+
+    
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">SFML</p>
+      <p class="reading mx-auto mb-5">
+        Working with SFML provided invaluable experience in managing window events, rendering graphics, and handling user input within a graphics application. In this project, I successfully implemented the core features of a real-time interactive application. A key contribution was the development of the main render loop in DrawingApp.cpp, which can render a diverse array of shapes onto a window. This component also includes a specialized render target for freehand drawing.
+        </p>        
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">TGUI</p>
+      <p class="reading mx-auto mb-5">
+        Incorporating the TGUI library into my C++ project was a great experience, deepening my understanding of GUI development. Through TGUI, I developed my skills in managing event-driven systems, particularly the listener pattern. This experience was instrumental in teaching me handling of library integration. A notable application was in developing my color picker system, where TGUI's capabilities were seamlessly combined with other libraries to create an efficient and user-friendly interface. This project not only enhanced my technical skills but also provided practical insights into creating integrated systems in software development.
+        </p>        
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Branching</p>
+      <p class="reading mx-auto mb-5">
+        I've been using Git as my preferred source control tool for some time, but my solo projects had not exposed me to the full potential of branching. Aware of its importance, I made a concerted effort to use branching during this project. This learning experience enabled me to effectively manage different development streams, creating dedicated branches for new features like drawing shapes, implementing save functionality, and freeform drawing. Each feature was developed in its branch and later merged into the main branch when it was ready for “production”.
+        </p>
+        <p class="reading mx-auto mb-5">
+            This approach not only streamlined the development process but also proved to be a safeguard against potential disruptions in the stable version of my project. By isolating changes in separate branches, I was able to experiment without risking the integrity of the main codebase. The practice of branching, which I initially adopted out of necessity for this project, has now become an integral part of my workflow, significantly enhancing both my efficiency and the reliability of my software development process. Moving forward, I plan to continue leveraging this strategy, as it has already proven invaluable in maintaining a stable and functional codebase.
+        </p>        
+    </div>
+  </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+    <img src="../Images/2D-DrawingApp/GitBranches.png" alt="Clean Architecture Graphic" class="rounded-2 w-50 mx-auto my-2"> 
+ </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+    <p class="reading-cat mx-auto mt-5">Unit Testing</p>
+    <p class="reading mx-auto mb-5">
+        The primary objective of this testing plan is to validate the functionality and reliability of all CRUD (Create, Read, Update, Delete) operations performed on the database. This encompasses ensuring that these operations provide accurate, consistent, and reliable data manipulation. The plan aims to cover various scenarios, including normal operations, edge cases, and error handling, to comprehensively assess the robustness of the database interactions.
+        </p>
+        
+        <p class="reading mx-auto mb-5">
+        The testing was conducted using the xUnit testing framework. To simulate the database environment without affecting the actual SQLite database, the project leverages an in-memory database. This approach facilitates testing in a controlled environment, allowing for the isolation of database operations. The in-memory database is designed to replicate the behavior of the actual database, enabling a thorough evaluation of CRUD functionalities. The tests will be executed to assess the correctness of the database operations, with particular attention to the consistency of the data returned and the system's response to various input conditions. The test results will provide insights into the performance and reliability of the database operations, forming the basis for any necessary refinements or optimizations.
+        </p>        
+  </div>
+  </div>
+
+  <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+    <p class="reading-cat mx-auto mt-5">What did I learn?</p>
+    <p class="reading mx-auto mb-5">
+        This project served as an outstanding exercise in various area of software development and compute graphics. It began with a dive into the fundamentals of 2D graphics programming, where I developed a solid understanding of 2D graphics ranging from the creation of simple shapes to the implementation of more complex functionalities like color selection, tool switching, and free-handed drawing. Equally important was the focus on user interface design, which taught me how to create easy to use GUI in C++.
+        As the project progressed, I encountered and resolved numerous challenges, a process that not only sharpened my problem-solving abilities but also significantly improved my debugging techniques. This hands-on experience was crucial in developing a more methodical and efficient approach to troubleshooting.
+        Project management was another critical aspect of this endeavor. I oversaw the project from its inception through to completion, which involved planning, implementation, testing, and iteration. This comprehensive experience not only bolstered my technical skills in graphics programming and UI design but also played a pivotal role in my overall development as a software developer, equipping me with a diverse set of skills and a holistic understanding of software project lifecycle.        
+    </p>              
+  </div>
+  </div>
+
+  <!-- Social link footer-->
+  <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
+    <div class="text-center m-5 p-5">
+        <div>
+            <a href="https://www.linkedin.com/in/leemclafferty/">
+                <i class="fa-brands fa-linkedin-in img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://lee-mclafferty.itch.io">
+                <i class="fa-brands fa-itch-io img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://www.discord.com/users/180187926246850560">
+                <i class="fa-brands fa-discord img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://github.com/LeeMclafferty">
+                <i class="fa-brands fa-github img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+        </div>  
+    </div>
+</footer>
+      
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
