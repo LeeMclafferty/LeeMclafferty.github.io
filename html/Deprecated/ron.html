@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lee Mclafferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/projects.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/fdb30e1950.js"
+      crossorigin="anonymous"
+></script>
+  </head>
+    
+<body>
+
+<!-- Sticky Nav Bar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+      <h5 class="navbar-brand" style="color: #D64045;">LEE MCLAFFERTY</h5>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="d-flex ms-auto ">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#home" >Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#projects" >Projects</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#resume" >Resume</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#about" >About Me</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</nav>
+
+
+    <!-- Title Page -->
+<header class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card" id="home">
+  <div class="background-image-bubbles card-img m-0">
+      <div class="pt-5 mt-5">
+        <!-- Title and Contact-->
+          <div class="py-4 ms-5 ps-3">
+              <h1 class="display-4 fw-bold pb-1">Hi, I'm Ron (The Game)</h1>
+              <hr>
+              <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
+                Contact Me
+            </button>    
+        </div>
+
+        <div class="col mt-3 mb-3">
+            <!-- Project Video-->
+            <div class="embed-responsive embed-responsive-16by9">
+              <div class="w-25 mx-auto row project-vid">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/p2vCxzAVGzU" allowfullscreen="true"></iframe>
+              </div>
+          </div>
+
+            <!-- Github Link-->
+            <div>
+                <a href="https://github.com/LeeMclafferty/ron-game">
+                    <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
+                </a>
+          </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+  <!-- About Project Section-->
+  <div>
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5"> "Hi, I'm Ron", is my first complete game developed in Unreal Engine. This fan game is based on a D&D podcast and showcases my experience with Unreal Engine 5, C++, Blender3D, Niagara particles, and UMG. Through the creation of this game, I gained a deeper understanding of the architecture of a complete game, how the classes in Unreal Engine interact with each other, project scoping, the importance of scalable and reusable code, and overall gameplay programming improvement. I am excited to share my passion for game development and my technical abilities with the world through this first project.</p>
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5"> Throughout the project, I aimed to tie together the concepts I had learned and demonstrate the execution flow inside the engine. To understand the lifetime of key classes such as the Game Instance and Game Mode, I implemented features that relied on them. For example, I used the Game Instance to hold the game's overall state, such as the song that played, and the Game Mode for gameplay-specific features such as mission states. I also dipped my toes into shaders and particles by creating all of the water, music, spawning and end game visual effects, including the end game portal.</p>
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+       <img src="../Images/ronPortal.gif.gif" alt="End game portal" class="rounded-2 w-50 mx-auto my-2"> 
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">While game design was not the primary focus of this project, I still aimed to guide the player with particles and animations. For instance, I used an alpha texture and some stretch/squash animations to direct the player in Ron's childhood room.</p>
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+       <img src="../Images/ronRoom.gif.gif" alt="Ron's room" class="rounded-2 w-50 mx-auto my-2"> 
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">Overall, this game was a great first project that I was able to successfully scope and complete. Although there are things I would change in retrospect, I am still very proud of the final product and seeing a project through until the end.</p>
+    </div>
+  </div>
+
+  <!-- Social link footer-->
+  <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
+    <div class="text-center m-5 p-5">
+        <div>
+            <a href="https://www.linkedin.com/in/leemclafferty/">
+                <i class="fa-brands fa-linkedin-in img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://lee-mclafferty.itch.io">
+                <i class="fa-brands fa-itch-io img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://www.discord.com/users/180187926246850560">
+                <i class="fa-brands fa-discord img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://github.com/LeeMclafferty">
+                <i class="fa-brands fa-github img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+        </div>  
+    </div>
+</footer>
+      
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

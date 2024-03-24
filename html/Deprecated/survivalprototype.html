@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lee Mclafferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/projects.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/fdb30e1950.js"
+      crossorigin="anonymous"
+></script>
+  </head>
+    
+<body>
+
+<!-- Sticky Nav Bar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+<div class="container-fluid">
+  <h5 class="navbar-brand" style="color: #D64045; font-weight: bold;">LEE MCLAFFERTY</h5>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <img src="../Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <nav class="d-flex ms-auto ">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#home" >Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#projects" >Projects</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#resume" >Resume</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#about" >About Me</a></li>
+          </ul>
+      </nav>
+  </div>
+</div>
+</nav>
+
+    <!-- Title Page -->
+<header class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card" id="home">
+  <div class="background-image-bubbles card-img m-0">
+      <div class="pt-5 mt-5">
+        <!-- Title and Contact-->
+          <div class="py-4 ms-5 ps-3">
+              <h1 class="display-4 fw-bold pb-1">Replicated Prototype</h1>
+              <hr>
+              <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
+                Contact Me
+            </button>    
+        </div>
+
+        <div class="col mt-3 mb-3">
+            <!-- Project Video-->
+            <div class="embed-responsive embed-responsive-16by9">
+              <div class="w-25 mx-auto row project-vid">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Z7Vk5LMLcXA" allowfullscreen="true"></iframe>
+              </div>
+          </div>
+
+            <!-- Github Link-->
+            <div>
+                <a href="https://github.com/LeeMclafferty/SurvivalGame">
+                    <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
+                </a>
+          </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+  <!-- About Project Section-->
+  <div>
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5"> Creating a multiplayer game in Unreal Engine was my goal with this project. It was a way for me to push myself and explore some of the more complicated systems that come with it, such as character customization, replication, and source control.</p>
+    </div>
+
+    
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">One of the first things I implemented was a main menu level with transitional cameras for a smooth character creation system. This allowed players to set up a "dummy" with rotating skeletal mesh so they could customize their player. Once they had selected their customizations, they could create their player and load into the level. In the game, players could find several systems that were replicated, such as player inventories, animations, and resource gathering. Additionally, I gained some experience with Blender by creating the sword and shield assets, along with adding a new custom skeleton to store assets.</p>
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+      <!-- Replace with gif--> 
+       <img src="../Images/CharacterCreation.gif" alt="Character Creation Gif" class="rounded-2 w-50 mx-auto my-2"> 
+    </div>
+
+    
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">Replication was a key component of this project, allowing for multiple people to join a listen server with an application like Himachi and see their customized character displayed on all clients. This allowed me to explore replication further and create a more complex multiplayer game in the future.<br><br> One of the biggest takeaways from this project was learning about source control and how to use it properly. Although I made some mistakes along the way, they were a valuable learning experience that helped me become more efficient in the long run.
+      </p>
+    </div>
+    
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+      <!-- Replace with gif--> 
+       <img src="../Images/Inventory.gif" alt="Inventory gif" class="rounded-2 w-50 mx-auto my-2"> 
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading mx-auto my-5">Looking back on this project, I'm proud of what I accomplished, even if there is still room for improvement. It pushed me out of my comfort zone and forced me to learn new things, making me a better game developer overall. Despite some missteps, I am glad that I embarked on this journey and look forward to applying what I've learned to future projects.</p>
+    </div>
+
+  </div>
+
+  <!-- Social link footer-->
+  <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
+    <div class="text-center m-5 p-5">
+        <div>
+            <a href="https://www.linkedin.com/in/leemclafferty/">
+                <i class="fa-brands fa-linkedin-in img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://lee-mclafferty.itch.io">
+                <i class="fa-brands fa-itch-io img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://www.discord.com/users/180187926246850560">
+                <i class="fa-brands fa-discord img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://github.com/LeeMclafferty">
+                <i class="fa-brands fa-github img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+        </div>  
+    </div>
+</footer>
+      
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

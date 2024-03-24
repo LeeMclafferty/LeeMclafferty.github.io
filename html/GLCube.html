@@ -1,0 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lee Mclafferty</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/projects.css" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/fdb30e1950.js"
+      crossorigin="anonymous"
+></script>
+  </head>
+    
+<body>
+
+<!-- Sticky Nav Bar-->
+<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-fluid">
+      <h5 class="navbar-brand" style="color: #D64045;">LEE MCLAFFERTY</h5>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="../Images/hamburgerMenu.png" alt="hamburger menu" class="collapse-color">  
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <nav class="d-flex ms-auto ">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#home" >Home</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#projects" >Projects</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#resume" >Resume</a></li>
+                <li class="nav-item"><a class="nav-link nav-link-custom" href="../index.html#about" >About Me</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+</nav>
+
+<!-- Title Page -->
+<header class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card" id="home">
+  <div class="background-image-bubbles card-img m-0">
+      <div class="pt-5 mt-5">
+        <!-- Title and Contact-->
+          <div class="py-4 ms-5 ps-3">
+              <h1 class="display-4 fw-bold pb-1">GL-Cube</h1>
+              <hr>
+              <button type="button" class="btn btn-lg contact-btn" onclick="location.href='mailto:lee.mclafferty@gmail.com'">
+                Contact Me
+            </button>    
+        </div>
+
+        <div class="col mt-3 mb-3">
+            <!-- Project Video-->
+              <div class="mx-auto row">
+                <img src="../Images/GL-Cube/Rotate.gif" alt="Finished Cube Renderer" class="rounded-2 mx-auto my-2 header-image"> 
+              </div>
+        
+            <!-- Github Link-->
+            <div>
+                <a href="https://github.com/LeeMclafferty/3D-Cube-Rendering">
+                    <img src="../Images/github.png" alt="github Logo" class="row img-fluid github-icon w-25 mx-auto mt-4">
+                </a>
+          </div>
+          </div>
+      </div>
+  </div>
+</header>
+
+  <!-- About Project Section-->
+  <div>
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Why did I do this project? <p>
+        <p class="reading mx-auto mb-5">
+          I started on this OpenGL project to challenge myself and expand my knowledge in 3D graphics programming, an area I've always been fascinated by. The project was an opportunity to apply theoretical concepts in a practical setting, pushing my understanding of rendering, transformations, and lighting in a real-time environment. It allowed me to explore the intricate dynamics of user interaction within 3D scenes, ultimately enhancing my proficiency in creating visually rich and interactive graphics applications.
+        </p>            
+    </div>
+    
+    <!-- OpenGL -->
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Open GL</p>
+      <p class="reading mx-auto mb-5">
+        Getting into OpenGL for this project offered me a higher level experience with computer graphics, opposed to a Software Renderer I have made in the past. This project navigated through:</p>
+        <ul class="reading mx-auto mb-5">
+            <li>Rendering textured meshes</li>
+            <li>Mesh transformations using matrix operations and quaternions for rotation, which was pivotal in avoiding common holdups like gimbal lock.</li>
+            <li>Implementing a robust system for camera movement</li>
+            <li>Mesh manipulation in response to user input</li>
+            <li>Lighting techniques such as ambient, diffuse, and specular lighting to enhance realism.</li>
+            <li>Debugging shaders with RenderDoc</li>
+        </ul>
+        <p class="reading mx-auto mb-5">This project helped develop my technical skills in computer graphics by taking the time to understand what was happening at all times and not allowing modern tools and abstraction do the work for me.</p>
+    </div>
+  
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Working With Vertex and Buffers</p>
+      <p class="reading mx-auto mb-5">
+        Getting to grips with handling the GPU through OpenGL was definitely a bit out of my comfort zone at first, but I got the hang of it pretty quickly. Essentially, OpenGL has this straightforward process where you generate a buffer, bind it, and then push data into it to send off to the GPU. The cool part is how you define what this data looks like, based on the layout of your mesh's vertices, and you use a "stride" to jump from one attribute to the next. OpenGL keeps track of all this using "IDs" that are pretty much like simplified pointers, counting up from 0, 1, 2, and so on.
+        <br><br>When I set out to define the vertex layout for the GPU, I wanted to make sure it was something that could be easily reused and adapted. Here’s a peek at how I did it:
+        </p>        
+    </div>
+
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 bg-image card card-color">  
+      <pre class="mb-3 mt-3 mx-auto">
+        void BufferManager::CreateObjectOnGPU(const std::vector<Vertex> vertices, size_t vertexCount, const std::vector<GLuint> indices, size_t indexCount)
+          {
+            // Generate .. Bind .. Copy
+            glGenVertexArrays(1, &VAO);
+            glBindVertexArray(VAO);
+          
+            glGenBuffers(1, &VBO);
+            glBindBuffer(GL_ARRAY_BUFFER, VBO);
+            glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * vertexCount, vertices.data(), GL_STATIC_DRAW);
+          
+            glGenBuffers(1, &EBO);
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+            glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * indexCount, indices.data(), GL_STATIC_DRAW);
+            
+            // Position attribute
+            glEnableVertexAttribArray(0);
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
+          
+            // Color attribute
+            glEnableVertexAttribArray(1);
+            glVertexAttribPointer(1, 4, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(sizeof(GLfloat) * 3));
+          
+            // Texture Coordinates attribute
+            glEnableVertexAttribArray(2);
+            glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(sizeof(GLfloat) * 7));
+          
+            // Normals attribute
+            glEnableVertexAttribArray(3);
+            glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)(sizeof(GLfloat) * 9));
+          
+          }</pre>
+    </div>
+
+    <!-- Transformations -->
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Transformations</p>
+      <p class="reading mx-auto mb-5">
+        I've been using Git as my preferred source control tool for some time, but my solo projects had not exposed me to the full potential of branching. Aware of its importance, I made a concerted effort to use branching during this project. This learning experience enabled me to effectively manage different development streams, creating dedicated branches for new features like drawing shapes, implementing save functionality, and freeform drawing. Each feature was developed in its branch and later merged into the main branch when it was ready for “production”.
+        </p>
+        <p class="reading mx-auto mb-5">         
+        Transformations in 3D space are not something foreign to me, but this part of the project still took the most amount of time. I was quickly able to get the transformations working with matrix multiplication since I've manually done all the math in a software renderer project before. The real challenge came when I started diving deeper and stumbled upon quaternions. I learned about their importance in avoiding gimbal lock—a situation where, in certain orientations, you lose a degree of freedom in rotation, making it impossible to rotate around one axis due to the alignment of two of the three axes.
+        <br>Unlike the straightforward approach of matrix multiplication, quaternions operate in a four-dimensional space, which was initially a tough concept to grasp. I spent time learning about quaternion algebra, how to represent rotations as quaternions, and how they interpolate smoothly between rotations (slerp). The learning curve was steep, involving complex numbers and understanding how quaternions are normalized to maintain their rotational properties. Although I wouldn't say I have mastered the math concept, I developed an understanding of implementation and let the glm library help me wih the rest.
+        </p>        
+    </div>
+
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+      <img src="../Images/GL-Cube/MeshTranformations.gif" alt="Transformations Gif" class="rounded-2 w-50 mx-auto my-2"> 
+    </div>
+
+    <!-- Textures -->
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Textures</p>
+      <p class="reading mx-auto mb-5">
+        Texture mapping in 3D graphics involves applying a 2D image onto the surface of a 3D model, a technique crucial for adding detailed visuals to objects in real-time rendering without the need for complex geometry. The implementation process in OpenGL begins with modifying the vertex layout to include 2D texture coordinates. These coordinates direct the GPU on how to align the texture over the 3D object's surface. Following this, the image file is loaded and passed to the shader as a Sampler2D uniform. Finally, the texture is applied to the mesh using the GLSL texture() function, significantly enhancing the mesh's visual detail with minimal geometric complexity.
+      </p>
+    </div>
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 bg-image card card-color">  
+      <img src="../Images/GL-Cube/Textures.gif" alt="Textures Gif" class="rounded-2 w-50 mx-auto my-2"> 
+    </div>
+
+    <!-- Lighting -->
+    <div class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card">
+      <p class="reading-cat mx-auto mt-5">Lighting</p>
+      <p class="reading mx-auto mb-5">
+        Lighting fundamentally transforms the visual fidelity of 3D rendering, becoming an essential element in achieving the desired aesthetic. Integrating lighting into my project marked a significant milestone, not only elevating the visual impact but also becoming a highlight of the development process. My previous endeavors with flat shading only scratched the surface of lighting's potential. In this project, I ventured further towards realism by making three types of lighting: ambient, diffuse, and specular.
+        <br><br>Achieving this lighting effect required a blend of linear algebra and vector mathematics, simplifiying the complexity in realistic lighting simulations. While the scope of lighting in 3D graphics extends beyond the bounds of my current implementation, delving into ambient, diffuse, and specular lighting has provided a solid foundation and an introduction to the intricate world of 3D rendering illumination.
+      </p>
+    </div>
+
+    <div class="mb-5 m-lg-2 text-dark rounded-bottom-3 bg-image card card-color">
+      <div class="row text-center"> <!-- Use 'row' to ensure the grid system is applied -->
+          <div class="col"> <!-- Define the column for each image/caption pair -->
+              <figure>
+                  <img src="../Images/GL-Cube/ambient.gif" alt="Ambient Lighting" class="rounded-2 w-100 mx-auto my-2 text-dark">
+                  <figcaption>Ambient</figcaption>
+              </figure>
+          </div>
+          <div class="col">
+              <figure>
+                  <img src="../Images/GL-Cube/Diffuse+Ambient.gif" alt="Diffuse and Ambient Lighting" class="rounded-2 w-100 mx-auto my-2">
+                  <figcaption>Diffuse</figcaption>
+              </figure>
+          </div>
+          <div class="col">
+              <figure>
+                  <img src="../Images/GL-Cube/Rotate.gif" alt="Rotation Demo" class="rounded-2 w-100 mx-auto my-2">
+                  <figcaption>Specular</figcaption>
+              </figure>
+      </div>
+    </div>
+
+  </div>
+  
+  </div>
+  
+
+
+  </div>
+
+  <!-- Social link footer-->
+  <footer class="mb-5 m-lg-2 text-light rounded-bottom-3 card-color card" id="resume">
+    <div class="text-center m-5 p-5">
+        <div>
+            <a href="https://www.linkedin.com/in/leemclafferty/">
+                <i class="fa-brands fa-linkedin-in img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://lee-mclafferty.itch.io">
+                <i class="fa-brands fa-itch-io img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://www.discord.com/users/180187926246850560">
+                <i class="fa-brands fa-discord img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+            <a href="https://github.com/LeeMclafferty">
+                <i class="fa-brands fa-github img-fluid footer-icon ps-3 m-1"></i>
+            </a>
+        </div>  
+    </div>
+  </footer>
+      
+
+      <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
