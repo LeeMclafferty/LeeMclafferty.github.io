@@ -133,3 +133,44 @@ a:visited {
   margin-top: 1rem;
   color: #333; /* Dark text for readability */
 }
+
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  /* For tablets and smaller desktops: 2 columns */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  /* For landscape phones and smaller tablets: 1 column */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Adjusting the .project-thumbnail size for mobile devices */
+@media (max-width: 767px) {
+  .project-thumbnail {
+    max-width: 100%; /* Allow thumbnails to use the full width of the card */
+  }
+}
+
+/* Making the .reading content more mobile-friendly */
+.reading {
+  max-width: 100%; /* Allow text blocks to use the full width on smaller screens */
+}
+
+@media (min-width: 768px) {
+  .reading {
+    max-width: 50%; /* Restrict text block width on larger screens */
+  }
+}
+
+/* Adjust social icons for smaller screens */
+@media (max-width: 767px) {
+  .social-icon, .footer-icon {
+    max-width: 15%; /* Increase size slightly for better visibility on small screens */
+  }
+}
